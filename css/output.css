@@ -19,6 +19,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #556B2F;
 }
 
 ul {
@@ -30,7 +31,8 @@ header, section, nav, footer {
 }
 
 header {
-  background: url(/images/reading-4330761_1920.jpg), rgba(0, 0, 0, 0.08);
+  background: url(/images/reading-4330761_1920.jpg);
+  background-color: rgba(0, 0, 0, 0.08);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 100vh;
@@ -39,7 +41,45 @@ header nav {
   display: flex;
   padding: 0.75rem;
   justify-content: space-between;
-  border: 1px black solid;
+  align-items: center;
+}
+header nav ul {
+  display: none;
+  gap: 1rem;
+}
+header nav button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+header nav button ion-icon {
+  font-size: 24px;
+  font-weight: bolder;
+}
+header #section_hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+header #section_hero h2 {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+}
+header #section_hero p {
+  max-width: 700px;
+}
+header #section_hero a {
+  background-color: #C9A227;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+header #section_hero a:hover {
+  background-color: #556B2F;
+  color: #FAF9F6;
 }
 
 /*# sourceMappingURL=output.css.map */

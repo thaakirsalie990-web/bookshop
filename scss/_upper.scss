@@ -55,6 +55,55 @@ $shadow-card: 0 4px 12px $color-shadow;
 $shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
 
 // ===============================
+// 🔘 BUTTONS
+// ===============================
+$button-font-family: $font-ui;
+$button-font-size: 15px;
+$button-font-weight: 600;
+$button-padding-y: 0.75rem; // 12px
+$button-padding-x: 1.5rem;  // 24px
+$button-border-radius: $radius-md;
+
+// Button Colors
+$button-primary-bg: $color-accent;      // Antique Gold
+$button-primary-text: $color-text;      // Charcoal
+$button-primary-hover-bg: $color-link;  // Olive Green
+$button-primary-hover-text: $color-bg;  // Ivory
+
+$button-secondary-bg: transparent;
+$button-secondary-text: $color-link;
+$button-secondary-border: $color-link;
+$button-secondary-hover-bg: $color-link;
+$button-secondary-hover-text: $color-bg;
+
+$button-disabled-bg: #d3cfc7;
+$button-disabled-text: #8b8b8b;
+
+// ===============================
+// 📚 CARDS
+// ===============================
+$card-bg: $color-card;
+$card-text: $color-text;
+$card-radius: $radius-lg;
+$card-padding: $space-lg;
+$card-shadow: $shadow-card;
+$card-hover-shadow: $shadow-hover;
+$card-border: 1px solid $color-border;
+
+// ===============================
+// ✏️ INPUTS & FORMS
+// ===============================
+$input-bg: $color-bg;
+$input-text: $color-text;
+$input-placeholder: $color-text-secondary;
+$input-border: 1px solid $color-border;
+$input-radius: $radius-sm;
+$input-padding-y: 0.625rem; // 10px
+$input-padding-x: 1rem;     // 16px
+$input-focus-border: $color-accent;
+$input-shadow-focus: 0 0 0 3px rgba($color-accent, 0.25);
+
+// ===============================
 // 📱 MEDIA QUERIES
 // ===============================
 // Common device widths
@@ -122,6 +171,7 @@ img {
 
 a {
     text-decoration: none;
+    color: $color-link;
 }
 
 ul {
@@ -133,7 +183,8 @@ header, section, nav, footer {
 }
 
 header {
-    background: url(/images/reading-4330761_1920.jpg), rgba(0, 0, 0, 0.08);
+    background: url(/images/reading-4330761_1920.jpg);
+    background-color: rgba(0, 0, 0, 0.08);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 100vh;
@@ -142,6 +193,52 @@ header {
         display: flex;
         padding: $space-sm;
         justify-content: space-between;
-        border: 1px black solid;
+        align-items: center;
+
+        ul {
+            display: none;
+            gap: $space-md;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            ion-icon {
+            font-size: $font-size-lg;
+            font-weight: bolder;
+            }
+        }
+    }
+
+    #section_hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $space-md;
+        padding: $space-lg;
+        text-align: center;
+
+        h2 {
+            font-size: $font-size-xl;
+            font-family: $font-heading;
+        }
+
+        p {
+            max-width: 700px;
+        }
+
+        a {
+            background-color: $color-accent;
+            padding: $button-padding-y $button-padding-x;
+            border-radius: $button-border-radius;
+        }
+
+        & a:hover {
+            background-color: $button-primary-hover-bg;
+            color: $button-primary-hover-text;
+        }
     }
 }
