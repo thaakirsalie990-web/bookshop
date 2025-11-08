@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: #2B2B2B;
+  background-color: #FAF9F6;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header, section, nav, footer {
+  max-width: 1200px;
+}
+
+header {
+  background: url(/images/reading-4330761_1920.jpg), rgba(0, 0, 0, 0.08);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header nav {
+  display: flex;
+  padding: 0.75rem;
+  justify-content: space-between;
+  border: 1px black solid;
+}
+
+/*# sourceMappingURL=output.css.map */
