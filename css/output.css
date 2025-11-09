@@ -93,6 +93,7 @@ header #section_hero a:hover {
   margin-bottom: 1.5rem;
   border-bottom: #C9A227 solid 1px;
   display: inline;
+  padding: 0 5px;
 }
 #section_release .section_release_text-container p {
   padding: 1rem;
@@ -121,6 +122,7 @@ header #section_hero a:hover {
   border-radius: 16px;
   padding: 1.5rem;
   width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /*# sourceMappingURL=output.css.map */

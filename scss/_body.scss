@@ -160,6 +160,7 @@ $transition-slow: all 0.5s ease;
       margin-bottom: $space-lg;
       border-bottom: $color-accent solid 1px;
       display: inline;
+      padding: 0 5px;
     }
 
     p {
@@ -194,6 +195,7 @@ $transition-slow: all 0.5s ease;
       border-radius: $card-radius;
       padding: $space-lg;
       width: 200px;
+      box-shadow: $card-shadow;
       
     }
   }
