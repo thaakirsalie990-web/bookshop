@@ -125,4 +125,56 @@ header #section_hero a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+#section_motivational {
+  background: url(/images/old-books-436498_1920.jpg);
+  height: 150px;
+  color: #FAF9F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section_motivational p {
+  padding: 1rem;
+}
+
+#section_best-selling-books {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 5rem;
+}
+#section_best-selling-books .section_text-container, #section_best-selling-books .section_best-selling-books_container, #section_best-selling-books .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+#section_best-selling-books .section_text-container h2 {
+  align-self: center;
+  padding: 5px 5px;
+  border-bottom: 1px solid #C9A227;
+}
+#section_best-selling-books .section_text-container p {
+  max-width: 800px;
+}
+#section_best-selling-books .section_best-selling-books_container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+#section_best-selling-books .section_best-selling-books_container .card {
+  border: 1px solid #DDD3C2;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#section_best-selling-books .section_best-selling-books_container .card img {
+  height: 200px;
+  width: 150px;
+}
+
 /*# sourceMappingURL=output.css.map */

@@ -147,6 +147,9 @@ $transition-base: all 0.3s ease;
 $transition-fast: all 0.15s ease;
 $transition-slow: all 0.5s ease;
 
+// =================================
+//  New Release Section
+// =================================
 #section_release {
   display: flex;
   flex-direction: column;
@@ -200,4 +203,74 @@ $transition-slow: all 0.5s ease;
     }
   }
 
+}
+
+// ==================================
+// Motivational Section
+// ================================
+
+#section_motivational {
+  background: url(/images/old-books-436498_1920.jpg);
+  height: 150px;
+  color: $color-bg;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    padding: $space-md;
+  }
+}
+
+// ==================================
+// Best Selling Books
+// ==================================
+
+#section_best-selling-books {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  justify-content: center;
+  padding: $space-section;
+
+  .section_text-container, .section_best-selling-books_container, .card {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    text-align: center;
+  }
+
+  .section_text-container {
+    
+    h2 {
+      align-self: center;
+      padding: 5px 5px;
+      border-bottom: 1px solid $color-accent;
+    }
+
+    p {
+      max-width: 800px;
+    }
+  }
+
+  .section_best-selling-books_container {
+    flex-direction: row;;
+    flex-wrap: wrap;
+    gap: $space-md;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        border: $card-border;
+        border-radius: $card-radius;
+        padding: $space-lg;
+        width: 200px;
+        box-shadow: $card-shadow;  
+  
+        img {
+          height: 200px;
+          width: 150px;
+        }
+      }
+  }
 }
