@@ -82,4 +82,45 @@ header #section_hero a:hover {
   color: #FAF9F6;
 }
 
+#section_release {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 5rem;
+  text-align: center;
+}
+#section_release .section_release_text-container h2 {
+  margin-bottom: 1.5rem;
+  border-bottom: #C9A227 solid 1px;
+  display: inline;
+}
+#section_release .section_release_text-container p {
+  padding: 1rem;
+}
+#section_release .section_release_books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+#section_release .section_release_books-container .release_books-container_div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+#section_release .section_release_books-container .release_books-container_div img {
+  height: 200px;
+  width: 150px;
+}
+#section_release .section_release_books-container .release_books-container_div .release_books-container_title, #section_release .section_release_books-container .release_books-container_div .release_books-container_price {
+  align-self: center;
+}
+#section_release .section_release_books-container .card {
+  border: 1px solid #DDD3C2;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 200px;
+}
+
 /*# sourceMappingURL=output.css.map */
