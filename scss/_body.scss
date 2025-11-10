@@ -274,3 +274,81 @@ $transition-slow: all 0.5s ease;
       }
   }
 }
+
+// ====================================
+// Flash Sale Section
+// ====================================
+
+#section_flash-sale-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: $space-md;
+  padding: $space-section;
+  margin: $space-md;
+  background-color: $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+
+  h2 {
+    align-self: center;
+    border-bottom: 1px solid $color-accent;
+    padding: 0 5px;
+  }
+
+  p {
+    max-width: 700px;
+  }
+
+  .section_flash-sale-section_container {
+    display: flex;
+    gap: $space-sm;
+
+    .timer-card {
+      background-color: $color-link;
+      border: 1px solid;
+      color: $color-accent;
+      padding: 10px;
+
+      span {
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  .carousel {
+    width: 80%;
+    max-width: 700px;
+    overflow: hidden;
+
+    .carousel-container {
+      display: flex;
+      gap: $space-xl;
+      justify-content: center;
+
+      .carousel-slides {
+        display: flex;
+        gap:$space-lg;
+        border: 1px solid $color-border;
+        box-shadow: $card-shadow;
+        padding: 20px;
+        align-items: center;
+        width: 500px;
+        
+        img {
+          height: 200px;
+          width: 150px;
+        }
+
+        .carousel-slides_text {
+          display: flex;
+          flex-direction: column;
+          gap: $space-sm;
+          text-align: start;
+        }
+      }
+    }
+  }
+}

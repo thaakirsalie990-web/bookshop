@@ -177,4 +177,68 @@ header #section_hero a:hover {
   width: 150px;
 }
 
+#section_flash-sale-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 5rem;
+  margin: 1rem;
+  background-color: #DDD3C2;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#section_flash-sale-section h2 {
+  align-self: center;
+  border-bottom: 1px solid #C9A227;
+  padding: 0 5px;
+}
+#section_flash-sale-section p {
+  max-width: 700px;
+}
+#section_flash-sale-section .section_flash-sale-section_container {
+  display: flex;
+  gap: 0.75rem;
+}
+#section_flash-sale-section .section_flash-sale-section_container .timer-card {
+  background-color: #556B2F;
+  border: 1px solid;
+  color: #C9A227;
+  padding: 10px;
+}
+#section_flash-sale-section .section_flash-sale-section_container .timer-card span {
+  font-size: 14px;
+}
+#section_flash-sale-section .carousel {
+  width: 80%;
+  max-width: 700px;
+  overflow: hidden;
+}
+#section_flash-sale-section .carousel .carousel-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+#section_flash-sale-section .carousel .carousel-container .carousel-slides {
+  display: flex;
+  gap: 1.5rem;
+  border: 1px solid #DDD3C2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  align-items: center;
+  width: 500px;
+}
+#section_flash-sale-section .carousel .carousel-container .carousel-slides img {
+  height: 200px;
+  width: 150px;
+}
+#section_flash-sale-section .carousel .carousel-container .carousel-slides .carousel-slides_text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: start;
+}
+
 /*# sourceMappingURL=output.css.map */
