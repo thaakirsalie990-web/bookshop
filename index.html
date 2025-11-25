@@ -1,186 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- links -->
-     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/output.css">
-
-    <!-- fonts -->
-
-    <!-- playfair display -->
+    <title>Luminary Books</title>
+    <link rel="stylesheet" href="css/output.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <!-- lora -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <!-- raleway -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- title -->
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ======================
-                Header
-     ========================== -->
-<header>
 
-    <nav>
-        <h2>logo</h2>
-        <ul>
-            <li>Search</li>
-            <li>Bookmark</li>
-            <li>favourites</li>
-        </ul>
+    <!-- =====================
+            Header
+    ========================== -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__brand">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#1A1A40"/>
+                        <path d="M10 20C10 15 14 15 14 15V28C14 28 10 28 10 25V20Z" stroke="white" stroke-width="2"/>
+                        <path d="M30 20C30 15 26 15 26 15V28C26 28 30 28 30 25V20Z" stroke="white" stroke-width="2"/>
+                        <path d="M14 15C14 15 20 12 26 15" stroke="white" stroke-width="2"/>
+                        <line x1="20" y1="13" x2="20" y2="28" stroke="white" stroke-width="2"/>
+                    </svg>
+                <span class="header__title">Luminary</span>
+            </div>
 
-        <button>
-            <ion-icon name="menu-outline"></ion-icon>
-        </button>
-    </nav>
+            <nav class="header__nav" id="nav-menu">
+                <ul class="header__list">
+                    <li><a href="#" class="header__link">Home</a></li>
+                    <li><a href="#featured" class="header__link">Featured</a></li>
+                    <li><a href="#trending" class="header__link">Trending</a></li>
+                    <li><a href="#audio" class="header__link">Audio Books</a></li>
+                    <li><a href="#contact" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
 
-    <!-- hero section -->
-     <section id="section_hero">
-        <h2>This Month</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <a href="">Read More</a>
-     </section>
-</header>
-<main>
-<section id="section_release">
-
-    <div class="section_release_text-container">
-        <h2>Latest Releases</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, tempore mollitia sequi quia quaerat, eius facilis possimus pariatur, illum optio hic qui distinctio nisi sapiente error.</p>
-    </div>
-
-    <div class="section_release_books-container">
-
-        <div class="release_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
+            <div class="header__actions">
+                <a href="#" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="#" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+                <a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <div class="release_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
-        </div>
-
-        <div class="release_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
-        </div>
-
-        <div class="release_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
-        </div>
-
-    </div>
-
-    <a href="">View All</a>
-</section>
-
-<!-- =================================
-        Motivational Section
-===================================== -->
-<section id="section_motivational">
-    <p>"A good night’s sleep helps you perform well in school, and so if you’re a student you should always get a good night’s sleep unless you have come to the good part of your book, and then you should stay up all night and let your schoolwork fall by the wayside." - Lemony Snicket, The Austere Academy</p>
-</section>
-
-<!-- ====================================
-        Best Selling Books Section
- ===================================== -->
- <section id="section_best-selling-books">
-
-    <div class="section_text-container">
-        <h2>Best Selling</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis itaque error beatae sed consectetur provident voluptates rerum et nisi odio consequatur</p>
-    </div>
-
-    <div class="section_best-selling-books_container">
-
-        <div class="best-selling_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
-        </div>
-
-        <div class="best-selling_books-container_div card">
-            <img src="/images/old-books-436498_1920.jpg" alt="">
-            <span class="release_books-container_title">Title</span>
-            <span class="release_books-container_price">Price</span>
-        </div>
-
-    </div>
-
- </section>
-
- <!-- ===========================================
-            Flash Sale Section
-  =========================================== -->
-  <section id="section_flash-sale-section">
-    <h2>Flash Sale</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic laborum voluptatum odio earum, reiciendis itaque minima explicabo quisquam iure a recusandae</p>
-
-    <div class="section_flash-sale-section_container">
-
-        <div class="timer-card days">
-            <h3>00</h3>
-            <span>Days</span>
-        </div>
-
-        <div class="timer-card hours">
-            <h3>00</h3>
-            <span>Hours</span>
-        </div>
-
-        <div class="timer-card mins">
-            <h3>00</h3>
-            <span>Mins</span>
-        </div>
-
-        <div class="timer-card secs">
-            <h3>00</h3>
-            <span>Secs</span>
-        </div>
-
-    </div>
-
-    <div class="carousel">
-
-        <div class="carousel-container">
-
-            <div class="carousel-slides">
-                <img src="/images/old-books-436498_1920.jpg" alt="">
-
-                <div class="carousel-slides_text">
-                    <h3>Blah Balh</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <span>Price</span>
+    <!-- =====================
+            Hero Section
+    ========================== -->
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__headline">Unlock worlds within words...</h1>
+                <p class="hero__sub">A curated sanctuary for bibliophiles. Discover rare editions, timeless classics, and the voices of tomorrow at prices that honor the reader.</p>
+                <a href="#" class="btn btn--primary">Start Reading <i class="fa-solid fa-arrow-right"></i></a>
+                
+                <div class="hero__social-proof">
+                    <div class="hero__avatars">
+                        <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D" alt="User">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D" alt="User">
+                        <img src="https://images.unsplash.com/photo-1504199367641-aba8151af406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D" alt="User">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZSUyMGZhY2VzfGVufDB8fDB8fHww" alt="User">
+                    </div>
+                    <span>12K+ Happy Readers</span>
+                </div>
+            </div>
+            
+            <div class="hero__image-wrapper">
+                <div class="hero__card">
+                    <img src="https://media.takealot.com/covers_tsins/37832478/a81e5bf7d8e7d3d6f14e0168ddcab011-zoom.jpg" alt="Open Book">
+                    <div class="hero__card-info">
+                        <h3>Norwegian Wood</h3>
+                        <p>Haruki Murakami's nostalgic, emotional novel...</p>
+                        <span class="hero__price">$20.00</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- =====================
+            About Us
+    ========================== -->
+    <section class="section about-us">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Our Story</h2>
+                <a href="#" class="section__link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="about-us__content">
+                <p>Luminary Books began as a small corner shop in 1995. Today, we bridge the gap between digital convenience and the tactile joy of reading. We believe every book finds its reader at the right time.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- ========================================
-    -->
-</main>
+    <!-- =====================
+        Featured Categories
+    ========================== -->
+    <section class="section categories" id="featured">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Featured Categories</h2>
+                <a href="#" class="section__link">All Categories <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="categories__grid">
+                <div class="category-card category-card--purple">
+                    <i class="fa-solid fa-book-open category-card__icon"></i>
+                    <h3>Fiction & Non-Fiction</h3>
+                </div>
+                <div class="category-card category-card--cream">
+                    <i class="fa-solid fa-heart category-card__icon"></i>
+                    <h3>Romance</h3>
+                </div>
+                <div class="category-card category-card--blue">
+                    <i class="fa-solid fa-dragon category-card__icon"></i>
+                    <h3>Fantasy</h3>
+                </div>
+                <div class="category-card category-card--teal">
+                    <i class="fa-solid fa-magnifying-glass category-card__icon"></i>
+                    <h3>Mystery</h3>
+                </div>
+                <div class="category-card category-card--pink">
+                    <i class="fa-solid fa-seedling category-card__icon"></i>
+                    <h3>Personal Growth</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ion-icons -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- =====================
+        Trending Books
+    ========================== -->
+    <section class="section trending" id="trending">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Trending Books</h2>
+                <div class="nav-arrows">
+                    <button class="nav-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="nav-arrow active"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="book-grid">
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <div class="book-card__image">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1383242805i/18743255.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-card__details">
+                        <h3 class="book-card__title">The Silent Echo</h3>
+                        <p class="book-card__author">J. K. Rain</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__price">$19.00</span>
+                            <span class="book-card__rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <button class="btn btn--block btn--primary">Add to Bag</button>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <div class="book-card__image">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1608116397i/56308699.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-card__details">
+                        <h3 class="book-card__title">Velvet Morning</h3>
+                        <p class="book-card__author">Trine Bøhm</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__price">$24.50</span>
+                            <span class="book-card__rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                        </div>
+                        <button class="btn btn--block btn--primary">Add to Bag</button>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <div class="book-card__image">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1658581247i/61256256.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-card__details">
+                        <h3 class="book-card__title">Beneath the Spire</h3>
+                        <p class="book-card__author">Allison Carr Waechter</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__price">$29.00</span>
+                            <span class="book-card__rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <button class="btn btn--block btn--primary">Add to Bag</button>
+                    </div>
+                </article>
+                
+                 <!-- Book 4 -->
+                 <article class="book-card">
+                    <div class="book-card__image">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1748345434i/23031.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-card__details">
+                        <h3 class="book-card__title">Time's Arrow</h3>
+                        <p class="book-card__author">Carlo R. Velli</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__price">$15.00</span>
+                            <span class="book-card__rating"><i class="fa-solid fa-star"></i> 4.5</span>
+                        </div>
+                        <button class="btn btn--block btn--primary">Add to Bag</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Audio Books
+    ========================== -->
+    <section class="section audio-books" id="audio">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Audio Books</h2>
+                <a href="#" class="section__link">Show All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="audio-grid">
+                <div class="audio-card">
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1688748379i/184858132.jpg" alt="Cover" class="audio-card__img">
+                    <div class="audio-card__info">
+                        <h3>Whispers in Dark</h3>
+                        <p>Nik Knight, Lily Mayne</p>
+                        <span>12 hrs 30 mins</span>
+                    </div>
+                    <button class="audio-card__play"><i class="fa-solid fa-play"></i></button>
+                </div>
+
+                <div class="audio-card">
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1609095173i/50202953.jpg" alt="Cover" class="audio-card__img">
+                    <div class="audio-card__info">
+                        <h3>Piranesi</h3>
+                        <p>Susanna Clarke</p>
+                        <span>4 hrs 15 mins</span>
+                    </div>
+                    <button class="audio-card__play"><i class="fa-solid fa-play"></i></button>
+                </div>
+
+                <div class="audio-card">
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1758250614i/236115775.jpg" alt="Cover" class="audio-card__img">
+                    <div class="audio-card__info">
+                        <h3>The Fox and the Devil</h3>
+                        <p>Kiersten White</p>
+                        <span>18 hrs 05 mins</span>
+                    </div>
+                    <button class="audio-card__play"><i class="fa-solid fa-play"></i></button>
+                </div>
+
+                <div class="audio-card">
+                    <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1741223091i/206025428.jpg" alt="Cover" class="audio-card__img">
+                    <div class="audio-card__info">
+                        <h3>Firstborn of the Sun</h3>
+                        <p>Marvellous Michael Anson</p>
+                        <span>6 hrs 20 mins</span>
+                    </div>
+                    <button class="audio-card__play"><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Quote Banner
+    ========================== -->
+    <section class="quote-banner">
+        <div class="quote-banner__overlay">
+            <blockquote>
+                “I do believe something very magical can happen when you read a book.”
+                <cite>— J. K. Rowling</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- =====================
+        Authors
+    ========================== -->
+    <section class="section authors">
+        <div class="container">
+            <h2 class="section__title">Authors of this Month</h2>
+            
+            <div class="authors-grid">
+                <div class="author-card">
+                    <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/07/J.K.-Rowling.jpg" alt="Author">
+                    <div class="author-card__content">
+                        <h3>J.K. Rowling</h3>
+                        <p>Prague, Czech Republic</p>
+                        <button class="btn btn--small btn--accent">Follow</button>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/07/Elif-Shafak.jpg" alt="Author">
+                    <div class="author-card__content">
+                        <h3>Elif Shafak</h3>
+                        <p>Roma, Italy</p>
+                        <button class="btn btn--small btn--accent">Follow</button>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/07/Khaled-Hosseini-1024x682.jpg" alt="Author">
+                    <div class="author-card__content">
+                        <h3>Khaled Hosseini</h3>
+                        <p>Cairo, Egypt</p>
+                        <button class="btn btn--small btn--accent">Follow</button>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="https://mczellbookwriting.com/blog/wp-content/uploads/2022/07/Brian-Evenson.jpg" alt="Author">
+                    <div class="author-card__content">
+                        <h3>Brian Evenson</h3>
+                        <p>Hokaido, Japan</p>
+                        <button class="btn btn--small btn--accent">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Promo Cards
+    ========================== -->
+    <section class="section promos">
+        <div class="container promos__grid">
+            <div class="promo-card promo-card--teal">
+                <div class="promo-card__text">
+                    <h3>New<br>Release</h3>
+                    <button class="btn btn--small">Shop Now</button>
+                </div>
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1394988109i/22034.jpg" alt="Book" class="promo-card__img">
+            </div>
+
+            <div class="promo-card promo-card--blue">
+                <div class="promo-card__text">
+                    <h3>Sale on<br>History books</h3>
+                    <button class="btn btn--small">Shop Now</button>
+                </div>
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1738227067i/223614387.jpg" alt="Book" class="promo-card__img">
+            </div>
+
+            <div class="promo-card promo-card--red">
+                <div class="promo-card__text">
+                    <h3>Top Rated</h3>
+                    <button class="btn btn--small">Shop Now</button>
+                </div>
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1743342771i/214183001.jpg" alt="Book" class="promo-card__img">
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Upcoming
+    ========================== -->
+    <section class="section upcoming">
+        <div class="container upcoming__container">
+            <div class="upcoming__content">
+                <h2 class="section__title">Upcoming Book Alert...</h2>
+                <p>Get 30% off by just booking a book before release.</p>
+                <button class="btn btn--primary">Notify Me <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="upcoming__collage">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657781256l/61439040._SX318_.jpg" alt="Cover">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1696989545l/127441416.jpg" alt="Cover">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1631088473l/35031085._SY475_.jpg" alt="Cover">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg" alt="Cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Customer Feedback
+    ========================== -->
+    <section class="section reviews">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Customer Feedback</h2>
+                <div class="nav-arrows">
+                    <button class="nav-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="nav-arrow active"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <p class="review-card__text">"Luminary is a breath of fresh air in the digital reading space. The design is clean, organized, and makes browsing feel effortless."</p>
+                    <div class="review-card__user">
+                        <img src="https://placehold.co/50x50/333/fff?text=RE" alt="User">
+                        <div>
+                            <h4>Robert Eyon</h4>
+                            <span>Publishing Consultant</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <p class="review-card__text">"I was instantly drawn to the elegance of Bookish. The interface is smooth, responsive, and incredibly user-friendly."</p>
+                    <div class="review-card__user">
+                        <img src="https://placehold.co/50x50/555/fff?text=FD" alt="User">
+                        <div>
+                            <h4>Fyona Darling</h4>
+                            <span>Indie Author, Pareaks</span>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Contact Form
+    ========================== -->
+    <section class="section contact-form" id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-box__text">
+                    <h2>Contact Us</h2>
+                    <p>Have a question about an order or a book recommendation? Send us a message.</p>
+                </div>
+                <form class="contact-box__form">
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="3"></textarea>
+                    <button type="submit" class="btn btn--primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+        Newsletter
+    ========================== -->
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter__card">
+                <div class="newsletter__content">
+                    <h2>Subscribe to our Newsletter</h2>
+                    <p>Subscribe to our newsletter and be the first one to get insights, updates on new books, packages and sales.</p>
+                </div>
+                <div class="newsletter__form-wrapper">
+                    <span>Stay up to date</span>
+                    <form class="newsletter__form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                    </form>
+                    <small>By subscribing you agree to our <a href="#">Privacy Policy</a></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+            Footer
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <div class="header__brand">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#1A1A40"/>
+                        <path d="M10 20C10 15 14 15 14 15V28C14 28 10 28 10 25V20Z" stroke="white" stroke-width="2"/>
+                        <path d="M30 20C30 15 26 15 26 15V28C26 28 30 28 30 25V20Z" stroke="white" stroke-width="2"/>
+                        <path d="M14 15C14 15 20 12 26 15" stroke="white" stroke-width="2"/>
+                        <line x1="20" y1="13" x2="20" y2="28" stroke="white" stroke-width="2"/>
+                    </svg>
+                    <span class="header__title">Luminary</span>
+                </div>
+                <div class="footer__contact-info">
+                    <div class="footer__item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Luminary Books Pvt Ltd<br>Farmgate, Dhaka-1204</p>
+                    </div>
+                    <div class="footer__item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>hello@luminary.com<br>support@luminary.com</p>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Records</a></li>
+                    <li><a href="#">Supports</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">For artists</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Investor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Condition</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2024 – All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js" defer></script>
 </body>
 </html>

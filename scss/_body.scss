@@ -1,354 +1,415 @@
-// ===============================
-// 🎨 COLOR SYSTEM
-// ===============================
-$color-bg: #FAF9F6;                // Ivory White – main background
-$color-card: #EFE8DE;              // Light Taupe – containers / cards
-$color-text: #2B2B2B;              // Charcoal – main text
-$color-text-secondary: #5A5A5A;    // Warm Gray – subtext / muted text
-$color-accent: #C9A227;            // Antique Gold – primary accent
-$color-link: #556B2F;              // Olive Green – links, hovers
-$color-footer: #6E2C00;            // Deep Burgundy – footer background
-$color-border: #DDD3C2;            // Subtle neutral border tone
-$color-shadow: rgba(0, 0, 0, 0.08);// Soft shadows
+@use 'variables' as *;
 
-// Hover / Interaction States
-$color-accent-hover: darken($color-accent, 10%);
-$color-link-hover: darken($color-link, 10%);
-$color-button-hover: $color-link-hover;
-
-// ===============================
-// 🧭 TYPOGRAPHY
-// ===============================
-$font-heading: 'Playfair Display', serif;
-$font-body: 'Lora', serif;
-$font-ui: 'Raleway', sans-serif;
-
-$font-size-base: 16px;
-$font-size-sm: 14px;
-$font-size-md: 18px;
-$font-size-lg: 24px;
-$font-size-xl: 32px;
-$font-size-xxl: 48px;
-
-$line-height-base: 1.8;
-
-// ===============================
-// 📏 SPACING SCALE
-// (modular 8px system)
-// ===============================
-$space-xxs: 0.25rem; // 4px
-$space-xs: 0.5rem;    // 8px
-$space-sm: 0.75rem;   // 12px
-$space-md: 1rem;      // 16px
-$space-lg: 1.5rem;    // 24px
-$space-xl: 2rem;      // 32px
-$space-xxl: 3rem;     // 48px
-$space-section: 5rem; // 80px
-
-// ===============================
-// 🧱 RADIUS & SHADOWS
-// ===============================
-$radius-sm: 4px;
-$radius-md: 8px;
-$radius-lg: 16px;
-$shadow-card: 0 4px 12px $color-shadow;
-$shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
-
-// ===============================
-// 🔘 BUTTONS
-// ===============================
-$button-font-family: $font-ui;
-$button-font-size: 15px;
-$button-font-weight: 600;
-$button-padding-y: 0.75rem; // 12px
-$button-padding-x: 1.5rem;  // 24px
-$button-border-radius: $radius-md;
-
-// Button Colors
-$button-primary-bg: $color-accent;      // Antique Gold
-$button-primary-text: $color-text;      // Charcoal
-$button-primary-hover-bg: $color-link;  // Olive Green
-$button-primary-hover-text: $color-bg;  // Ivory
-
-$button-secondary-bg: transparent;
-$button-secondary-text: $color-link;
-$button-secondary-border: $color-link;
-$button-secondary-hover-bg: $color-link;
-$button-secondary-hover-text: $color-bg;
-
-$button-disabled-bg: #d3cfc7;
-$button-disabled-text: #8b8b8b;
-
-// ===============================
-// 📚 CARDS
-// ===============================
-$card-bg: $color-card;
-$card-text: $color-text;
-$card-radius: $radius-lg;
-$card-padding: $space-lg;
-$card-shadow: $shadow-card;
-$card-hover-shadow: $shadow-hover;
-$card-border: 1px solid $color-border;
-
-// ===============================
-// ✏️ INPUTS & FORMS
-// ===============================
-$input-bg: $color-bg;
-$input-text: $color-text;
-$input-placeholder: $color-text-secondary;
-$input-border: 1px solid $color-border;
-$input-radius: $radius-sm;
-$input-padding-y: 0.625rem; // 10px
-$input-padding-x: 1rem;     // 16px
-$input-focus-border: $color-accent;
-$input-shadow-focus: 0 0 0 3px rgba($color-accent, 0.25);
-
-// ===============================
-// 📱 MEDIA QUERIES
-// ===============================
-// Common device widths
-$breakpoint-xs: 480px;
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
-$breakpoint-xxl: 1536px;
-
-// Media query mixins
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == xs {
-    @media (max-width: #{$breakpoint-xs}) { @content; }
-  } @else if $breakpoint == sm {
-    @media (max-width: #{$breakpoint-sm}) { @content; }
-  } @else if $breakpoint == md {
-    @media (max-width: #{$breakpoint-md}) { @content; }
-  } @else if $breakpoint == lg {
-    @media (max-width: #{$breakpoint-lg}) { @content; }
-  } @else if $breakpoint == xl {
-    @media (max-width: #{$breakpoint-xl}) { @content; }
-  } @else if $breakpoint == xxl {
-    @media (max-width: #{$breakpoint-xxl}) { @content; }
-  }
-}
-
-// ===============================
-// 🧩 Z-INDEX LAYERS
-// ===============================
-$z-base: 1;
-$z-dropdown: 1000;
-$z-overlay: 2000;
-$z-modal: 3000;
-$z-tooltip: 4000;
-
-// ===============================
-// ⚙️ TRANSITIONS
-// ===============================
-$transition-base: all 0.3s ease;
-$transition-fast: all 0.15s ease;
-$transition-slow: all 0.5s ease;
-
-// =================================
-//  New Release Section
-// =================================
-#section_release {
-  display: flex;
-  flex-direction: column;
-  gap: $space-lg;
-  padding:$space-section;
-  text-align: center;
-
-  .section_release_text-container {
-
-    h2 {
-      margin-bottom: $space-lg;
-      border-bottom: $color-accent solid 1px;
-      display: inline;
-      padding: 0 5px;
-    }
-
-    p {
-      padding: $space-md;
-    }
-  }
-
-  .section_release_books-container {
+/* =====================
+   Categories
+========================= */
+.categories__grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: $space-md;
+    gap: $space-2;
+    overflow-x: auto;
+    padding-bottom: $space-2;
 
-    .release_books-container_div {
-      display: flex;
-      flex-direction: column;
-      gap: $space-md;
-      justify-content: center;
-      
-      img {
-        height: 200px;
-        width: 150px;
-      }
-  
-      .release_books-container_title, .release_books-container_price {
-        align-self: center;
-      }
+    @media (min-width: $break-lg) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: visible;
     }
-  
-    .card {
-      border: $card-border;
-      border-radius: $card-radius;
-      padding: $space-lg;
-      width: 200px;
-      box-shadow: $card-shadow;
-      
-    }
-  }
-
 }
 
-// ==================================
-// Motivational Section
-// ================================
-
-#section_motivational {
-  background: url(/images/old-books-436498_1920.jpg);
-  height: 150px;
-  color: $color-bg;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    padding: $space-md;
-  }
-}
-
-// ==================================
-// Best Selling Books
-// ==================================
-
-#section_best-selling-books {
-  display: flex;
-  flex-direction: column;
-  gap: $space-md;
-  justify-content: center;
-  padding: $space-section;
-
-  .section_text-container, .section_best-selling-books_container, .card {
+.category-card {
+    min-width: 140px;
+    padding: $space-3;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    gap: $space-md;
-    text-align: center;
-  }
-
-  .section_text-container {
-    
-    h2 {
-      align-self: center;
-      padding: 5px 5px;
-      border-bottom: 1px solid $color-accent;
-    }
-
-    p {
-      max-width: 800px;
-    }
-  }
-
-  .section_best-selling-books_container {
-    flex-direction: row;;
-    flex-wrap: wrap;
-    gap: $space-md;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: $space-2;
+    cursor: pointer;
+    transition: transform 0.2s;
 
-    .card {
-        border: $card-border;
-        border-radius: $card-radius;
-        padding: $space-lg;
-        width: 200px;
-        box-shadow: $card-shadow;  
-  
-        img {
-          height: 200px;
-          width: 150px;
-        }
-      }
-  }
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+    }
+
+    &--purple { background: #F3E8FF; i { color: #7E22CE; } }
+    &--cream { background: #FFF7ED; i { color: #C2410C; } }
+    &--blue { background: #DBEAFE; i { color: #1D4ED8; } }
+    &--teal { background: #E0F2FE; i { color: #0369A1; } }
+    &--pink { background: #FCE7F3; i { color: #BE185D; } }
 }
 
-// ====================================
-// Flash Sale Section
-// ====================================
+/* =====================
+   Trending
+========================= */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-2;
 
-#section_flash-sale-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: $space-md;
-  padding: $space-section;
-  margin: $space-md;
-  background-color: $color-border;
-  border-radius: $radius-lg;
-  box-shadow: $shadow-card;
-
-  h2 {
-    align-self: center;
-    border-bottom: 1px solid $color-accent;
-    padding: 0 5px;
-  }
-
-  p {
-    max-width: 700px;
-  }
-
-  .section_flash-sale-section_container {
-    display: flex;
-    gap: $space-sm;
-
-    .timer-card {
-      background-color: $color-link;
-      border: 1px solid;
-      color: $color-accent;
-      padding: 10px;
-
-      span {
-        font-size: $font-size-sm;
-      }
+    @media (min-width: $break-md) {
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+    
+    @media (min-width: $break-lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
-  .carousel {
-    width: 80%;
-    max-width: 700px;
-    overflow: hidden;
+.book-card {
+    background: transparent;
+    padding: $space-2;
+    
+    &__image {
+        background: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: $space-2;
+        img { width: 100%; object-fit: cover; }
+    }
 
-    .carousel-container {
-      display: flex;
-      gap: $space-xl;
-      justify-content: center;
+    &__title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
 
-      .carousel-slides {
+    &__author {
+        font-size: 0.875rem;
+        color: $color-muted;
+        margin-bottom: $space-2;
+    }
+
+    &__meta {
         display: flex;
-        gap:$space-lg;
-        border: 1px solid $color-border;
-        box-shadow: $card-shadow;
-        padding: 20px;
+        justify-content: space-between;
+        margin-bottom: $space-2;
+        font-weight: 600;
+        font-size: 0.9rem;
+        
+        i { color: #FBBF24; }
+    }
+}
+
+/* =====================
+   Audio Books
+========================= */
+.audio-grid {
+    display: grid;
+    gap: $space-3;
+
+    @media (min-width: $break-md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.audio-card {
+    background: white;
+    padding: $space-2;
+    border-radius: 8px;
+    border: 1px solid $color-border;
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    position: relative;
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    &__info {
+        flex: 1;
+        h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        p { font-size: 0.875rem; color: $color-muted; }
+        span { font-size: 0.75rem; color: $color-muted; display: block; margin-top: 0.5rem; }
+    }
+
+    &__play {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid $color-text;
+        background: white;
+        cursor: pointer;
+        display: flex;
         align-items: center;
-        width: 500px;
+        justify-content: center;
+        
+        &:hover {
+            background: $color-primary;
+            color: white;
+            border-color: $color-primary;
+        }
+    }
+}
+
+/* =====================
+   Quote
+========================= */
+.quote-banner {
+    background-image: url('https://placehold.co/1200x400/1e1b4b/1e1b4b?text=.+'); /* Using color to simulate dark library */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: $space-6 $space-2;
+    text-align: center;
+    
+    &__overlay {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    blockquote {
+        font-family: $font-serif;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        
+        cite {
+            display: block;
+            margin-top: $space-3;
+            font-family: $font-sans;
+            font-size: 1rem;
+            font-style: normal;
+        }
+
+        @media (min-width: $break-lg) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+/* =====================
+   Authors
+========================= */
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @media (min-width: $break-lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.author-card {
+    text-align: center;
+    
+    img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: $space-2;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 { font-family: $font-serif; margin-bottom: 0.25rem; }
+    p { font-size: 0.875rem; color: $color-muted; margin-bottom: $space-2; }
+}
+
+/* =====================
+   Promos
+========================= */
+.promos__grid {
+    display: grid;
+    gap: $space-3;
+    
+    @media (min-width: $break-lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.promo-card {
+    border-radius: 8px;
+    padding: $space-3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 200px;
+    
+    &__text {
+        h3 {
+            font-family: $font-serif;
+            font-size: 1.5rem;
+            margin-bottom: $space-2;
+        }
+    }
+
+    &__img {
+        transform: rotate(10deg);
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
+        max-width: 100px;
+    }
+
+    &--teal { background: #5EEAD4; color: #134E4A; }
+    &--blue { background: #1E3A8A; color: white; }
+    &--red { background: #FB7185; color: white; }
+}
+
+/* =====================
+   Upcoming
+========================= */
+.upcoming {
+    background: #FFF7ED;
+    
+    &__container {
+        display: grid;
+        gap: $space-4;
+        
+        @media (min-width: $break-lg) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    &__collage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-2;
         
         img {
-          height: 200px;
-          width: 150px;
+            max-width: 100px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            &:nth-child(even) { margin-top: $space-3; }
+            &:nth-child(odd) { margin-bottom: $space-3; }
         }
-
-        .carousel-slides_text {
-          display: flex;
-          flex-direction: column;
-          gap: $space-sm;
-          text-align: start;
-        }
-      }
     }
-  }
 }
+
+/* =====================
+   Reviews
+========================= */
+.reviews__grid {
+    display: grid;
+    gap: $space-3;
+    
+    @media (min-width: $break-md) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.review-card {
+    padding: $space-4;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    background: white;
+
+    &__text {
+        font-style: italic;
+        margin-bottom: $space-3;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+        
+        img { width: 50px; height: 50px; border-radius: 50%; }
+        
+        h4 { font-size: 0.9rem; }
+        span { font-size: 0.75rem; color: $color-muted; }
+        
+        .stars {
+            margin-left: auto;
+            color: #FBBF24;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+/* =====================
+   About & Contact
+========================= */
+.about-us {
+    background: white;
+    p { max-width: 800px; font-size: 1.1rem; line-height: 1.8; color: $color-muted; }
+}
+
+.contact-form {
+    padding-bottom: 0; 
+}
+
+.contact-box {
+    background: white;
+    border: 1px solid $color-border;
+    border-radius: 12px;
+    padding: $space-4;
+    
+    &__text { margin-bottom: $space-3; h2 { font-family: $font-serif; margin-bottom: $space-1;} }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: $space-2;
+        
+        input, textarea {
+            padding: $space-2;
+            border: 1px solid $color-border;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+    }
+}
+
+/* =====================
+   Newsletter
+========================= */
+.newsletter {
+    &__card {
+        background: linear-gradient(135deg, #A5B4FC, #818CF8);
+        padding: $space-5;
+        border-radius: 16px;
+        color: white;
+        
+        @media (min-width: $break-lg) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        margin-bottom: $space-4;
+        max-width: 500px;
+        
+        h2 { font-family: $font-serif; margin-bottom: $space-1; }
+        @media (min-width: $break-lg) { margin-bottom: 0; }
+    }
+
+    &__form-wrapper {
+        background: rgba(255,255,255,0.2);
+        padding: $space-3;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+        
+        span { display: block; margin-bottom: $space-1; font-weight: 600; }
+        
+        small {
+            display: block;
+            margin-top: $space-1;
+            font-size: 0.75rem;
+            a { text-decoration: underline; }
+        }
+    }
+
+    &__form {
+        display: flex;
+        gap: $space-1;
+        
+        input {
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            flex: 1;
+        }
+    }
+}
+

@@ -1,244 +1,314 @@
-// ===============================
-// 🎨 COLOR SYSTEM
-// ===============================
-$color-bg: #FAF9F6;                // Ivory White – main background
-$color-card: #EFE8DE;              // Light Taupe – containers / cards
-$color-text: #2B2B2B;              // Charcoal – main text
-$color-text-secondary: #5A5A5A;    // Warm Gray – subtext / muted text
-$color-accent: #C9A227;            // Antique Gold – primary accent
-$color-link: #556B2F;              // Olive Green – links, hovers
-$color-footer: #6E2C00;            // Deep Burgundy – footer background
-$color-border: #DDD3C2;            // Subtle neutral border tone
-$color-shadow: rgba(0, 0, 0, 0.08);// Soft shadows
+@use 'variables' as *;
 
-// Hover / Interaction States
-$color-accent-hover: darken($color-accent, 10%);
-$color-link-hover: darken($color-link, 10%);
-$color-button-hover: $color-link-hover;
-
-// ===============================
-// 🧭 TYPOGRAPHY
-// ===============================
-$font-heading: 'Playfair Display', serif;
-$font-body: 'Lora', serif;
-$font-ui: 'Raleway', sans-serif;
-
-$font-size-base: 16px;
-$font-size-sm: 14px;
-$font-size-md: 18px;
-$font-size-lg: 24px;
-$font-size-xl: 32px;
-$font-size-xxl: 48px;
-
-$line-height-base: 1.8;
-
-// ===============================
-// 📏 SPACING SCALE
-// (modular 8px system)
-// ===============================
-$space-xxs: 0.25rem; // 4px
-$space-xs: 0.5rem;    // 8px
-$space-sm: 0.75rem;   // 12px
-$space-md: 1rem;      // 16px
-$space-lg: 1.5rem;    // 24px
-$space-xl: 2rem;      // 32px
-$space-xxl: 3rem;     // 48px
-$space-section: 5rem; // 80px
-
-// ===============================
-// 🧱 RADIUS & SHADOWS
-// ===============================
-$radius-sm: 4px;
-$radius-md: 8px;
-$radius-lg: 16px;
-$shadow-card: 0 4px 12px $color-shadow;
-$shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
-
-// ===============================
-// 🔘 BUTTONS
-// ===============================
-$button-font-family: $font-ui;
-$button-font-size: 15px;
-$button-font-weight: 600;
-$button-padding-y: 0.75rem; // 12px
-$button-padding-x: 1.5rem;  // 24px
-$button-border-radius: $radius-md;
-
-// Button Colors
-$button-primary-bg: $color-accent;      // Antique Gold
-$button-primary-text: $color-text;      // Charcoal
-$button-primary-hover-bg: $color-link;  // Olive Green
-$button-primary-hover-text: $color-bg;  // Ivory
-
-$button-secondary-bg: transparent;
-$button-secondary-text: $color-link;
-$button-secondary-border: $color-link;
-$button-secondary-hover-bg: $color-link;
-$button-secondary-hover-text: $color-bg;
-
-$button-disabled-bg: #d3cfc7;
-$button-disabled-text: #8b8b8b;
-
-// ===============================
-// 📚 CARDS
-// ===============================
-$card-bg: $color-card;
-$card-text: $color-text;
-$card-radius: $radius-lg;
-$card-padding: $space-lg;
-$card-shadow: $shadow-card;
-$card-hover-shadow: $shadow-hover;
-$card-border: 1px solid $color-border;
-
-// ===============================
-// ✏️ INPUTS & FORMS
-// ===============================
-$input-bg: $color-bg;
-$input-text: $color-text;
-$input-placeholder: $color-text-secondary;
-$input-border: 1px solid $color-border;
-$input-radius: $radius-sm;
-$input-padding-y: 0.625rem; // 10px
-$input-padding-x: 1rem;     // 16px
-$input-focus-border: $color-accent;
-$input-shadow-focus: 0 0 0 3px rgba($color-accent, 0.25);
-
-// ===============================
-// 📱 MEDIA QUERIES
-// ===============================
-// Common device widths
-$breakpoint-xs: 480px;
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
-$breakpoint-xxl: 1536px;
-
-// Media query mixins
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == xs {
-    @media (max-width: #{$breakpoint-xs}) { @content; }
-  } @else if $breakpoint == sm {
-    @media (max-width: #{$breakpoint-sm}) { @content; }
-  } @else if $breakpoint == md {
-    @media (max-width: #{$breakpoint-md}) { @content; }
-  } @else if $breakpoint == lg {
-    @media (max-width: #{$breakpoint-lg}) { @content; }
-  } @else if $breakpoint == xl {
-    @media (max-width: #{$breakpoint-xl}) { @content; }
-  } @else if $breakpoint == xxl {
-    @media (max-width: #{$breakpoint-xxl}) { @content; }
-  }
-}
-
-// ===============================
-// 🧩 Z-INDEX LAYERS
-// ===============================
-$z-base: 1;
-$z-dropdown: 1000;
-$z-overlay: 2000;
-$z-modal: 3000;
-$z-tooltip: 4000;
-
-// ===============================
-// ⚙️ TRANSITIONS
-// ===============================
-$transition-base: all 0.3s ease;
-$transition-fast: all 0.15s ease;
-$transition-slow: all 0.5s ease;
-
-
-// ======================
-// Reset
-*, 
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: $font-body;
-    font-size: $font-size-base;
-    color: $color-text;
+    font-family: $font-sans;
     background-color: $color-bg;
+    color: $color-text;
+    line-height: 1.6;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
-    color: $color-link;
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
 ul {
     list-style: none;
 }
 
-header, section, nav, footer {
+/* =====================
+   Utilities
+========================= */
+.container {
+    width: 90%;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $space-2;
 }
 
-header {
-    background: url(/images/reading-4330761_1920.jpg);
-    background-color: rgba(0, 0, 0, 0.08);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 100vh;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
 
-    nav {
+    &--primary {
+        background-color: $color-primary;
+        color: white;
+
+        &:hover {
+            background-color: lighten($color-primary, 10%);
+        }
+    }
+
+    &--block {
+        width: 100%;
+    }
+
+    &--small {
+        padding: 0.4rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    &--accent {
+        background-color: rgba($color-accent, 0.2);
+        color: $color-primary;
+        &:hover {
+            background-color: $color-accent;
+            color: white;
+        }
+    }
+}
+
+.section {
+    padding: $space-5 0;
+
+    &__header {
         display: flex;
-        padding: $space-sm;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: $space-4;
+    }
 
-        ul {
-            display: none;
-            gap: $space-md;
+    &__title {
+        font-family: $font-serif;
+        font-size: 2rem;
+        color: $color-primary;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.nav-arrows {
+    display: flex;
+    gap: $space-2;
+}
+
+.nav-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $color-text;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        background: $color-primary;
+        color: white;
+        border-color: $color-primary;
+    }
+}
+
+/* =====================
+   Header
+========================= */
+.header {
+    padding: $space-3 0;
+    background-color: $color-bg;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: $space-1;
+    }
+
+    &__title {
+        font-family: $font-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+
+    &__nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: $color-bg;
+        padding: $space-4;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+        &.active {
+            transform: translateY(0);
         }
 
-        button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-
-            ion-icon {
-            font-size: $font-size-lg;
-            font-weight: bolder;
-            }
+        @media (min-width: $break-lg) {
+            position: static;
+            padding: 0;
+            transform: none;
+            box-shadow: none;
+            width: auto;
         }
     }
 
-    #section_hero {
+    &__list {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: $space-md;
-        padding: $space-lg;
+        gap: $space-3;
         text-align: center;
 
-        h2 {
-            font-size: $font-size-xl;
-            font-family: $font-heading;
+        @media (min-width: $break-lg) {
+            flex-direction: row;
+            gap: $space-4;
         }
+    }
 
-        p {
-            max-width: 700px;
-        }
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: $space-3;
+        font-size: 1.2rem;
+    }
 
-        a {
-            background-color: $color-accent;
-            padding: $button-padding-y $button-padding-x;
-            border-radius: $button-border-radius;
-        }
+    &__toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
 
-        & a:hover {
-            background-color: $button-primary-hover-bg;
-            color: $button-primary-hover-text;
+        @media (min-width: $break-lg) {
+            display: none;
         }
     }
 }
+
+/* =====================
+   Hero
+========================= */
+.hero {
+    padding: $space-4 0 $space-6;
+    
+    &__container {
+        display: grid;
+        gap: $space-5;
+        
+        @media (min-width: $break-lg) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    &__headline {
+        font-family: $font-serif;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: $space-3;
+        color: $color-primary;
+
+        @media (min-width: $break-lg) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__sub {
+        margin-bottom: $space-4;
+        color: $color-muted;
+        max-width: 500px;
+    }
+
+    &__social-proof {
+        margin-top: $space-5;
+        display: flex;
+        align-items: center;
+        gap: $space-2;
+        font-weight: 600;
+    }
+
+    &__avatars {
+        display: flex;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-right: -10px;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        
+        /* Simulating the book floating effect */
+        &::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background: white;
+            z-index: -1;
+            top: 10%;
+            right: 0;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+    }
+
+    &__card {
+        background: white;
+        padding: $space-2;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 300px;
+        
+        img {
+            border-radius: 4px;
+            margin-bottom: $space-2;
+            transform: rotate(-5deg);
+        }
+
+        h3 {
+            font-family: $font-serif;
+            margin-bottom: $space-1;
+        }
+        
+        .hero__price {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: $space-1;
+        }
+    }
+}
+
